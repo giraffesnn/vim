@@ -30,7 +30,6 @@ set statusline+=%F      " get the full path
 " Advanced
 set ruler		" Show row and column ruler information
  
-set autochdir		" Change working directory to open buffer
 set nobackup 		" Disable creating backup file
 set noswapfile 		" Disable creating a swap file
 
