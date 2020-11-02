@@ -1,4 +1,4 @@
-" 0. VimConfig 
+" 0. VimConfig
 " Simple and sane Vim configuration
 " https://vimconfig.com/
 
@@ -12,12 +12,12 @@ set showmatch		" Highlight matching brace
 set showcmd		" Showing line numbers should need no justification
 set showmode		" always show what mode we're currently editing in
 set visualbell		" Use visual bell (no beeping)
- 
+
 set hlsearch		" Highlight all search results
 set smartcase		" Enable smart-case search
 set ignorecase		" Always case-insensitive
 set incsearch		" Searches for strings incrementally
- 
+
 set autoindent		" Auto-indent new lines
 set shiftwidth=4	" Number of auto-indent spaces
 set smartindent		" Enable smart-indent
@@ -26,24 +26,24 @@ set softtabstop=4	" Number of spaces per Tab
 
 set laststatus=2        " display the status line always
 set statusline+=%F      " get the full path
- 
+
 " Advanced
 set ruler		" Show row and column ruler information
- 
+
 set nobackup 		" Disable creating backup file
 set noswapfile 		" Disable creating a swap file
 
-set nocompatible	"  
- 
+set nocompatible	"
+
 set undolevels=1000	" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
 syntax on               " syntax highlighting
 set wildmenu            " make tab completion for files/buffers act like bash
-set t_Co=256            " iTerm2 supports 256 color mode. 
+set t_Co=256            " iTerm2 supports 256 color mode.
 filetype indent on      " load filetype-specific indent files
 
-colorscheme desert	" /usr/share/vim/vim74/colors/desert/*.vim to  ~/.vim/*.vim 
+colorscheme desert	" /usr/share/vim/vim74/colors/desert/*.vim to  ~/.vim/*.vim
 set cursorline          " Highlight the current line
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
@@ -149,13 +149,13 @@ endfunction
 " https://www.vim.org/scripts/index.php
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CSCOPE settings for vim           
+" CSCOPE settings for vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " This file contains some boilerplate settings for vim's cscope interface,
 " plus some keyboard mappings that I've found useful.
 "
-" USAGE: 
+" USAGE:
 " -- vim 6:     Stick this file in your ~/.vim/plugin directory (or in a
 "               'plugin' directory in some other directory that is in your
 "               'runtimepath'.
@@ -163,7 +163,7 @@ endfunction
 " -- vim 5:     Stick this file somewhere and 'source cscope.vim' it from
 "               your ~/.vimrc file (or cut and paste it into your .vimrc).
 "
-" NOTE: 
+" NOTE:
 " These key maps use multiple keystrokes (2 or 3 keys).  If you find that vim
 " keeps timing you out before you can complete them, try changing your timeout
 " settings, as explained below.
@@ -175,7 +175,7 @@ endfunction
 
 
 " This tests to see if vim was configured with the '--enable-cscope' option
-" when it was compiled.  If it wasn't, time to recompile vim... 
+" when it was compiled.  If it wasn't, time to recompile vim...
 if has("cscope")
 
     """"""""""""" Standard cscope/vim boilerplate
@@ -190,14 +190,14 @@ if has("cscope")
 
     " add any cscope database in current directory
     if filereadable("cscope.out")
-        cs add cscope.out  
-    " else add the database pointed to by environment variable 
+        cs add cscope.out
+    " else add the database pointed to by environment variable
     elseif $CSCOPE_DB != ""
         cs add $CSCOPE_DB
 	endif
 
     " show msg when any other cscope db added
-	set cscopeverbose  
+	set cscopeverbose
 
 
     """"""""""""" My cscope/vim key mappings
@@ -232,17 +232,17 @@ if has("cscope")
     " To do the first type of search, hit 'CTRL-\', followed by one of the
     " cscope search types above (s,g,c,t,e,f,i,d).  The result of your cscope
     " search will be displayed in the current window.  You can use CTRL-T to
-    " go back to where you were before the search.  
+    " go back to where you were before the search.
     "
 
-    "nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-    "nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-    "nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-    "nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-    "nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-    "nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
-    "nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>	
-    "nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+    "nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    "nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    "nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    "nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    "nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    "nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    "nmap <C-\>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+    "nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
     nmap zs :cs find s <C-R>=expand("<cword>")<CR><CR>
     nmap zg :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap zc :cs find c <C-R>=expand("<cword>")<CR><CR>
@@ -259,29 +259,29 @@ if has("cscope")
     "
     " (Note: earlier versions of vim may not have the :scs command, but it
     " can be simulated roughly via:
-    "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    "    nmap <C-@>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
-    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@>i :scs find i <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-    " Hitting CTRL-space *twice* before the search type does a vertical 
+    " Hitting CTRL-space *twice* before the search type does a vertical
     " split instead of a horizontal one (vim 6 and up only)
 
-    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>	
-    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-@><C-@>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>	
-    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@><C-@>i :vert scs find i <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     """"""""""""" key map timeouts
@@ -290,7 +290,7 @@ if has("cscope")
     " You may find that too short with the above typemaps.  If so, you should
     " either turn off mapping timeouts via 'notimeout'.
     "
-    "set notimeout 
+    "set notimeout
     "
     " Or, you can keep timeouts, by uncommenting the timeoutlen line below,
     " with your own personal favorite value (in milliseconds):
@@ -303,7 +303,7 @@ if has("cscope")
     " delays as vim waits for a keystroke after you hit ESC (it will be
     " waiting to see if the ESC is actually part of a key code like <F1>).
     "
-    "set ttimeout 
+    "set ttimeout
     "
     " personally, I find a tenth of a second to work well for key code
     " timeouts. If you experience problems and have a slow terminal or
@@ -314,3 +314,4 @@ if has("cscope")
 
 endif
 
+source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
