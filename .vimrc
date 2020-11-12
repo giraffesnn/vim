@@ -5,9 +5,9 @@
 " General
 set number		" Show line numbers
 set linebreak		" Break lines at word (requires Wrap lines)
-set showbreak=+++ 	" Wrap-broken line prefix
+set showbreak=+++	" Wrap-broken line prefix
 set textwidth=80	" Line wrap (number of cols)
-set wrapmargin=2 	" To wrap text based on a number of columns from the right side
+set wrapmargin=2	" To wrap text based on a number of columns from the right side
 set showmatch		" Highlight matching brace
 set showcmd		" Showing line numbers should need no justification
 set showmode		" always show what mode we're currently editing in
@@ -30,8 +30,8 @@ set statusline+=%F      " get the full path
 " Advanced
 set ruler		" Show row and column ruler information
 
-set nobackup 		" Disable creating backup file
-set noswapfile 		" Disable creating a swap file
+set nobackup		" Disable creating backup file
+set noswapfile		" Disable creating a swap file
 
 set nocompatible	"
 
@@ -316,7 +316,14 @@ if has("cscope")
 
 endif
 
-source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
+" Vim Better Whitespace Plugin
+" git clone https://github.com/ntpeters/vim-better-whitespace.git ~/.vim/pack/vendor/start/vim-better-whitespace
+" To enable highlighting and stripping whitespace on save by default, use respectively
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+let g:strip_whitespace_confirm=0
+let g:strip_whitelines_at_eof=1
+let g:show_spaces_that_precede_tabs=1
 
 " NERDTree plugin: https://github.com/preservim/nerdtree
 " Vim 8+ packages
