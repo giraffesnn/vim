@@ -46,6 +46,8 @@ filetype indent on      " load filetype-specific indent files
 colorscheme desert	" /usr/share/vim/vim74/colors/desert/*.vim to  ~/.vim/*.vim
 set cursorline          " Highlight the current line
 hi CursorLine term=bold cterm=bold guibg=Grey40
+hi Pmenu ctermbg=darkgrey
+hi PmenuSel ctermbg=lightblue ctermfg=white
 
 " 1. linuxsty.vim : Vim plugin to respect the Linux kernel coding style
 " https://www.vim.org/scripts/index.php
