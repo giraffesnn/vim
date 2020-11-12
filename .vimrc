@@ -344,3 +344,12 @@ map <F3> <Esc>:TlistToggle<Cr>
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
+
+" vim-gitgutter
+" mkdir -p ~/.vim/pack/airblade/start
+" cd ~/.vim/pack/airblade/start
+" git clone https://github.com/airblade/vim-gitgutter.git
+" vim -u NONE -c "helptags vim-gitgutter/doc" -c q
+set updatetime=100
+let g:gitgutter_grep=''
+let g:gitgutter_terminal_reports_focus=0
