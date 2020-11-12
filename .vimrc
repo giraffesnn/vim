@@ -353,3 +353,6 @@ let Tlist_Exit_OnlyWindow = 1
 set updatetime=100
 let g:gitgutter_grep=''
 let g:gitgutter_terminal_reports_focus=0
+
+" lightline
+" git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/vendor/start/lightline
