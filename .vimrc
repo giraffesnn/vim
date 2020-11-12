@@ -317,3 +317,5 @@ if has("cscope")
 endif
 
 source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
+" taglist plugin
+source ~/.vim/taglist/plugin/taglist.vim
