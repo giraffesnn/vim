@@ -322,6 +322,7 @@ source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
 " Vim 8+ packages
 " git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 " vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+map <F2> :NERDTreeToggle<CR>
 
 " taglist plugin
 " https://www.swapreference.com/vim-vim-plugins/
