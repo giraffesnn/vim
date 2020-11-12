@@ -317,5 +317,11 @@ if has("cscope")
 endif
 
 source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
+
+" NERDTree plugin: https://github.com/preservim/nerdtree
+" Vim 8+ packages
+" git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+" vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
 " taglist plugin
 source ~/.vim/taglist/plugin/taglist.vim
