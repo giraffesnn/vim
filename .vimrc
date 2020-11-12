@@ -324,4 +324,7 @@ source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
 " vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
 " taglist plugin
+" it depends on catgs
+" $ctags -R
+set tags=./tags,tags;
 source ~/.vim/taglist/plugin/taglist.vim
