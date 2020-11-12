@@ -324,7 +324,15 @@ source ~/.vim/vim-better-whitespace/plugin/better-whitespace.vim
 " vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
 
 " taglist plugin
+" https://www.swapreference.com/vim-vim-plugins/
+" git clone https://github.com/yegappan/taglist.git ~/.vim/pack/vendor/start/taglist
+
 " it depends on catgs
 " $ctags -R
 set tags=./tags,tags;
-source ~/.vim/taglist/plugin/taglist.vim
+
+map <F3> <Esc>:TlistToggle<Cr>
+" required configuration of taglist
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
