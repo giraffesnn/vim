@@ -329,7 +329,7 @@ let g:show_spaces_that_precede_tabs=1
 " Vim 8+ packages
 " git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 " vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
-map <F2> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " taglist plugin
 " https://www.swapreference.com/vim-vim-plugins/
@@ -339,7 +339,7 @@ map <F2> :NERDTreeToggle<CR>
 " $ctags -R
 set tags=./tags,tags;
 
-map <F3> <Esc>:TlistToggle<Cr>
+map <C-t> <Esc>:TlistToggle<Cr>
 " required configuration of taglist
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1
