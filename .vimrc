@@ -6,7 +6,7 @@
 set number		" Show line numbers
 set linebreak		" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
-set textwidth=80	" Line wrap (number of cols)
+set textwidth=100	" Line wrap (number of cols)
 set wrapmargin=2	" To wrap text based on a number of columns from the right side
 set showmatch		" Highlight matching brace
 set showcmd		" Showing line numbers should need no justification
