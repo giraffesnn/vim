@@ -19,10 +19,12 @@ set ignorecase		" Always case-insensitive
 set incsearch		" Searches for strings incrementally
 
 set autoindent		" Auto-indent new lines
-set shiftwidth=4	" Number of auto-indent spaces
 set smartindent		" Enable smart-indent
 set smarttab		" Enable smart-tabs
-set softtabstop=4	" Number of spaces per Tab
+set tabstop=8
+set shiftwidth=8
+set softtabstop=8
+set noexpandtab
 
 set laststatus=2        " display the status line always
 set statusline+=%F      " get the full path
