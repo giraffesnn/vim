@@ -397,3 +397,7 @@ let g:ycm_filetype_whitelist = {
 	\ "sh":1,
 	\ "rst":1,
 	\ }
+
+" YCM-Generator
+" git clone https://github.com/rdnetto/YCM-Generator ~/.vim/pack/vendor/start/YCM-Generator
+noremap <C-I> :YcmGenerateConfig -c g++ -v -x c++ -f -b make .<CR>
