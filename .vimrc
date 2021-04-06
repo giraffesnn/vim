@@ -358,3 +358,42 @@ let g:gitgutter_terminal_reports_focus=0
 
 " lightline
 " git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/vendor/start/lightline
+
+" ftrace: function_graph
+" https://www.kernel.org/doc/Documentation/trace/function-graph-fold.vim
+" ~/.vim/pack/ftrace/start/function_graph
+" To use, :source this file while viewing a function_graph trace, or use vim's
+" -S option to load from the command-line together with a trace.
+
+" YouComPleteMe
+" git clone https://github.com/ycm-core/YouCompleteMe ~/.vim/pack/vendor/start/YouCompleteMe
+" cd ~/.vim/pack/vendor/start/YouCompleteMe
+" sudo apt install build-essential cmake vim python3-dev
+" Minimum compiler versions have been increased:
+" https://github.com/ycm-core/YouCompleteMe#readme
+" git submodule update --init --recursive
+" python ./install.py --clangd-completer or python ./install.py --all
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_log_level = 'info'
+let g:ycm_min_num_identifier_candidate_chars = 2
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_complete_in_strings=1
+let g:ycm_key_invoke_completion = '<c-z>'
+set completeopt=menu,menuone
+
+noremap <c-z> <NOP>
+
+let g:ycm_semantic_triggers =  {
+	\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+	\ 'cs,lua,javascript': ['re!\w{2}'],
+	\ }
+
+let g:ycm_filetype_whitelist = {
+	\ "c":1,
+	\ "cpp":1,
+	\ "dts":1,
+	\ "dtsi":1,
+	\ "sh":1,
+	\ "rst":1,
+	\ }
