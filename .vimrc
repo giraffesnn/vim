@@ -280,14 +280,19 @@ let g:gitgutter_terminal_reports_focus=0
 " https://github.com/ycm-core/YouCompleteMe#readme
 " git submodule update --init --recursive
 " python ./install.py --clangd-completer or python ./install.py --all
+set completeopt=menu,menuone,noinsert,noselect
 let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_server_log_level = 'info'
 let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_complete_in_strings=1
 let g:ycm_key_invoke_completion = '<c-z>'
-set completeopt=menu,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>" |
+set ttimeout
+set ttimeoutlen=20
 
 noremap <c-z> <NOP>
 
