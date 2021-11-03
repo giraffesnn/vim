@@ -323,6 +323,8 @@ noremap <C-I> :YcmGenerateConfig -c g++ -v -x c++ -f -b make .<CR>
 " git clone https://github.com/Yggdroot/LeaderF.git ~/.vim/pack/vendor/start/LeaderF
 let g:Lf_GtagsAutoGenerate = 1
 let g:Lf_Gtagslabel = 'native-pygments'
+let g:Lf_UseCache = 0
+let g:Lf_UseMemoryCache = 0
 noremap <leader>fr :<C-U><C-R>=printf("Leaderf! gtags -r %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fd :<C-U><C-R>=printf("Leaderf! gtags -d %s --auto-jump", expand("<cword>"))<CR><CR>
 noremap <leader>fo :<C-U><C-R>=printf("Leaderf! gtags --recall %s", "")<CR><CR>
